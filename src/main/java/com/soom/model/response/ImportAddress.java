@@ -28,33 +28,5 @@ public class ImportAddress {
 
     }
 
-    public class Error {
-        @SerializedName("name")
-        String name;
-
-        @SerializedName("code")
-        int code;
-
-        @SerializedName("message")
-        String message;
-
-        @SerializedName("error")
-        String error;
-
-        public String getName() {
-            return name;
-        }
-
-        public int getCode() {
-            return code;
-        }
-
-        public String getMessage() {
-            return message;
-        }
-
-        public String getError() {
-            return error;
-        }
-    }
+    public class Error extends JsonRpcErrorResponse {}
 }
