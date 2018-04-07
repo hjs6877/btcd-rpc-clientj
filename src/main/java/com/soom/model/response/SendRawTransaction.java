@@ -1,7 +1,7 @@
 package com.soom.model.response;
 
 import com.google.gson.annotations.SerializedName;
-
+// 주석을 만들었따....
 public class SendRawTransaction {
     @SerializedName("result")
     String txid;
