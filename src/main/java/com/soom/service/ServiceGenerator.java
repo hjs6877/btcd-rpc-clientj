@@ -12,7 +12,7 @@ public class ServiceGenerator {
     private String BASE_URL = "http://";
     private OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 
-    public <S> S createService(Class<S> serviceClass, String host, int port) {
+    public <S> S generateService(Class<S> serviceClass, String host, int port) {
         return generateService(serviceClass, host, port, null, null);
     }
 
