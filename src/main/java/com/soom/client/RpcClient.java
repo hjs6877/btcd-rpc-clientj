@@ -1,7 +1,11 @@
 package com.soom.client;
 
+import com.soom.model.request.JsonRpcRequest;
+import com.soom.model.response.BlockChainInfo;
 import com.soom.service.JsonRpcService;
 import com.soom.service.ServiceGenerator;
+import io.reactivex.Flowable;
+import io.reactivex.Single;
 
 public class RpcClient {
     private JsonRpcService jsonRpcService;
@@ -12,5 +16,13 @@ public class RpcClient {
                                                                 port,
                                                                 user,
                                                                 password);
+    }
+
+    public Flowable<BlockChainInfo> getBlockChainInfo() {
+        return jsonRpcService.getBlockChainInfo(new JsonRpcRequest(
+                "1.0",
+                "blockchaininfoData",
+                "getblockchaininfo",
+                null));
     }
 }

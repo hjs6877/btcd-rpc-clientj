@@ -56,6 +56,9 @@ public class BlockChainInfo {
         @SerializedName("initialblockdownload")
         boolean initialBlockDownload;
 
+        @SerializedName("chainwork")
+        String chainwork;
+
         @SerializedName("size_on_disk")
         long sizeOnDisk;
 
@@ -67,6 +70,9 @@ public class BlockChainInfo {
 
         @SerializedName("bip9_softforks")
         Bip9Softforks bip9Softforks;
+
+        @SerializedName("warnings")
+        String warnings;
 
         public class SoftForks {
             @SerializedName("id")
@@ -208,6 +214,10 @@ public class BlockChainInfo {
             return initialBlockDownload;
         }
 
+        public String getChainwork() {
+            return chainwork;
+        }
+
         public long getSizeOnDisk() {
             return sizeOnDisk;
         }
@@ -222,6 +232,10 @@ public class BlockChainInfo {
 
         public Bip9Softforks getBip9Softforks() {
             return bip9Softforks;
+        }
+
+        public String getWarnings(){
+            return warnings;
         }
     }
 
