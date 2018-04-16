@@ -3,20 +3,18 @@ package com.soom.examples;
 import com.soom.client.RpcClient;
 import com.soom.model.response.BlockChainInfo;
 import io.reactivex.Flowable;
-import io.reactivex.Single;
 import org.junit.Before;
 import org.junit.Test;
 
 public class BlockChainInfoTest {
-    private final static String HOST = "127.0.0.1";
-    private final static int PORT = 18332;
-    private final static String USER = "alice";
-    private final static String PASSWORD = "1111";
     private RpcClient rpcClient;
 
     @Before
     public void before(){
-        rpcClient = new RpcClient(HOST, PORT, USER, PASSWORD);
+        rpcClient = new RpcClient(RpcTestServerInfo.HOST,
+                RpcTestServerInfo.PORT,
+                RpcTestServerInfo.USER,
+                RpcTestServerInfo.PASSWORD);
     }
 
     @Test

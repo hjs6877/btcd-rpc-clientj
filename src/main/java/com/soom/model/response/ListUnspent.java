@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ListUnspent {
     @SerializedName("result")
-    public List<ListUnspent> result = new ArrayList<>();
+    public List<Result> result = new ArrayList<>();
 
     @SerializedName("error")
     Error error;
@@ -16,7 +16,7 @@ public class ListUnspent {
     @SerializedName("id")
     String id;
 
-    public List<ListUnspent> getResult() {
+    public List<Result> getResult() {
         return result;
     }
 
