@@ -5,6 +5,7 @@ import com.soom.model.response.BlockChainInfo;
 import com.soom.model.response.ListUnspent;
 import com.soom.service.JsonRpcService;
 import com.soom.service.ServiceGenerator;
+import io.reactivex.Completable;
 import io.reactivex.Flowable;
 import io.reactivex.Single;
 
@@ -52,5 +53,13 @@ public class RpcClient {
                 "listunspent",
                 "listunspent",
                 Arrays.asList(min, max, addresses)));
+    }
+
+    public Completable importAddress(String address){
+        return jsonRpcService.importAddress(new JsonRpcRequest(
+                "1.0",
+                "importaddress",
+                "importaddress",
+                Arrays.asList(address)));
     }
 }

@@ -6,7 +6,6 @@ import com.soom.model.response.ListUnspent;
 import com.soom.model.response.SendRawTransaction;
 import io.reactivex.Completable;
 import io.reactivex.Flowable;
-import io.reactivex.Single;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
 
